@@ -4,3 +4,4 @@ project(examples)
 set(CMAKE_CXX_STANDARD 14)
 
 add_executable(examples rectangulo.cpp)
+add_executable(Construtor construtor.cpp)
