@@ -5,7 +5,7 @@ Time::Time(unsigned int h,unsigned int m,unsigned int s){
     Minute_ = m;
     Second_ = s;
 }
-
+// const é usado pois serve para indicar que a função não ira realizar nenhuma alteração aos atributos
 void Time::ShowTime() const{
     std::cout << ((Hour_ > 9) ? "" : "0") << Hour_ << ":"
               << ((Minute_ > 9) ? "": "0") << Minute_ << ":"
