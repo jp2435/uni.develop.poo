@@ -12,12 +12,14 @@ class Circle:public Figure{
 private:
     double radius_;
 public:
-    //Adicionar outros construtores
+    //Adicionar mais construtores
     Circle(std::string Color="White",double CenterX=0,double CenterY=0,double Radius=1){
         SetColor(Color);
         SetCenter(CenterX,CenterY);
         SetRadius(Radius);
     }
+
+    // Setter Member Functions
     void SetRadius(double Radius){
         if(Radius <= 0){
             std::cout << "\n***Warning***\n"
@@ -30,11 +32,16 @@ public:
         }
     }
 
+    // Getter Member Functions
     float GetPerimeter(){
         return (float) (2*radius_)*PI;
     }
     float GetArea(){
         return (float) pow(radius_,2)*PI;
+    }
+    // Finalizar a função de analise de interseção
+    void CheckIntersect(Circle IntersectedCircle){
+
     }
 
 };
@@ -43,10 +50,21 @@ private:
     double width_; // Comprimento/Largura
     double height_; // Altura
 public:
-    Rectangle(){
-
+    // Adicionar mais construtores
+    Rectangle(
+      std::string Color="White",
+      double CenterX=0,
+      double CenterY=0,
+      double Width=1,
+      double Height=1){
+        SetWidth(Width);
+        SetHeight(Height);
+        SetColor(Color);
+        SetCenter(CenterX,CenterY);
     }
-    void SetWidth(double Width){
+
+    // Setter Member Functions
+    virtual void SetWidth(double Width){
         if(Width<=0){
             std::cout << "\n***Warning***\n"
                       << "Width tried to be set with an invalid value\n"
@@ -68,6 +86,8 @@ public:
             height_ = Height;
         }
     }
+
+    // Getter Member Functions
     virtual float GetPerimeter(){
         return (float) (2*width_)+(2*height_);
     }
@@ -82,6 +102,23 @@ public:
     // Adicionar mais construtores
     Square(std::string Color="White",double Cx=0,double Cy=0,double Width=1){
         SetWidth(Width);
+        SetColor(Color);
+        SetCenter(Cx,Cy);
+        std::cout << std::endl << width_ << std::endl;
+    }
+    // Corrigir problema de setar o Width_ no Square Obj
+    // (Funciona "corretamente", só não será o mais correto)
+    // Devido a não ser recomendado usar virtual functions em Construtores
+    void SetWidth(double Width){
+        if(Width<=0){
+            std::cout << "\n***Warning***\n"
+                      << "Width tried to be set with an invalid value\n"
+                      << "It has been fixed to a default value: 1\n"
+                      << "***Warning Ended***";
+            width_ = 1;
+        }else{
+            width_ = Width;
+        }
     }
     float GetPerimeter(){
         return (float) width_*4;
@@ -89,11 +126,5 @@ public:
     float GetArea(){
         return (float) pow(width_,2);
     }
-    void Testing(){
-        
-    }
 };
-class Triangle{};
-
-
 #endif

@@ -23,9 +23,13 @@ public:
     std::string GetColor() const{
         return color_;
     };
-    void ShowCenter(){
-        //Alterar
-        std::cout << center_.GetYCoord();
+    //double GetCenterX = center_.GetXCoord();
+    double GetCenterX(){
+        return center_.GetXCoord();
     }
+    double GetCenterY() {
+        center_.GetYCoord();
+    }
+
 };
 #endif
