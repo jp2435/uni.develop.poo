@@ -24,6 +24,7 @@ public:
         return color_;
     };
     void ShowCenter(){
+        //Alterar
         std::cout << center_.GetYCoord();
     }
 };

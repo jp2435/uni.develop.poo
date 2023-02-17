@@ -13,7 +13,9 @@ int main(){
     //fig.ShowCenter();
 
     Circle circle("White",0,2,3);
-    cout << circle.GetArea();
+    cout << circle.GetArea() << endl;
+    Rectangle rec;
+    cout << rec.GetPerimeter() << endl;
 
     return 0;
 }
