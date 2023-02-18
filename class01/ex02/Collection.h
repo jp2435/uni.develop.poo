@@ -39,9 +39,14 @@ public:
     float GetArea(){
         return (float) pow(radius_,2)*PI;
     }
-    // Finalizar a função de analise de interseção
-    void CheckIntersect(Circle IntersectedCircle){
-
+    float GetRadius() const{
+        return radius_;
+    }
+    bool CheckIntersect(Circle IntersectedCircle){
+        double distance = std::sqrt(
+                std::pow(IntersectedCircle.GetCenterX()- this->GetCenterX(),2)
+                + std::pow(IntersectedCircle.GetCenterY() - this->GetCenterY(),2));
+        return distance < IntersectedCircle.GetRadius() + this->radius_;
     }
 
 };
@@ -104,7 +109,6 @@ public:
         SetWidth(Width);
         SetColor(Color);
         SetCenter(Cx,Cy);
-        std::cout << std::endl << width_ << std::endl;
     }
     // Corrigir problema de setar o Width_ no Square Obj
     // (Funciona "corretamente", só não será o mais correto)

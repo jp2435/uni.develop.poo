@@ -1,7 +1,6 @@
 #ifndef FIGURE_CLASS_EX02
 #define FIGURE_CLASS_EX02
 #include <iostream>
-
 #include <string>
 
 #include "Point.h"
@@ -13,6 +12,7 @@ protected:
     std::string color_;
     Point center_;
 public:
+    //Setter Member Functions
     void SetColor(std::string Color){
         color_ = Color;
     }
@@ -20,10 +20,10 @@ public:
         center_.SetCoord(CenterX,CenterY);
     }
 
+    //Geter Member Functions
     std::string GetColor() const{
         return color_;
     };
-    //double GetCenterX = center_.GetXCoord();
     double GetCenterX(){
         return center_.GetXCoord();
     }
