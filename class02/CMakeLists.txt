@@ -3,4 +3,4 @@ project(class02)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(Ex01 ex01.cpp libs/User.h libs/User.cpp)
+add_executable(Ex01 ex01.cpp libs/User.h libs/User.cpp libs/Book.h libs/Book.cpp)
