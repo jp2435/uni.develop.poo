@@ -13,7 +13,8 @@ private:
     void SetID();
     static int UUID();
 public:
-
+    // Construtor
+    Book() = default;
 };
 
 

@@ -14,6 +14,8 @@ private:
     void SetID();
     static int UUID();
 public:
+    //Construtor
+    User() = default;
     //Setter Member functions
     void SetName(std::string Name);
 };
