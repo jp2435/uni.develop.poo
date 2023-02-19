@@ -1,5 +1,5 @@
-#ifndef CLASS02_BOOK_H
-#define CLASS02_BOOK_H
+#ifndef CLASS_BOOK_H
+#define CLASS_BOOK_H
 #include <iostream>
 
 class Book{
@@ -7,17 +7,14 @@ private:
     int id_;
     std::string title_;
     std::string type_;
-    void SetID(){
-        id_ = UUID();
-    }
+    bool Loan_;
+    int idLoaned_;
+
+    void SetID();
+    static int UUID();
 public:
-    int UUID(){
-        static int id = 99;
-        id+=1;
-        return id;
-    }
 
 };
 
 
-#endif //CLASS02_BOOK_H
+#endif

@@ -1,5 +1,10 @@
-//
-// Created by jorge on 19/02/2023.
-//
-
 #include "Book.h"
+
+int Book::UUID(){
+    static int id = 99;
+    id+=1;
+    return id;
+}
+void Book::SetID(){
+    id_ = UUID();
+}
