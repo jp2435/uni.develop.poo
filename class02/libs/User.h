@@ -15,9 +15,11 @@ private:
     static int UUID();
 public:
     //Construtor
-    User() = default;
+    explicit User(std::string name="Aluno",std::string course="LEEC",int Nmec=0);
     //Setter Member functions
     void SetName(std::string Name);
+    void SetCourse(std::string Course);
+    void SetNmec(int Nmec);
 };
 
 #endif

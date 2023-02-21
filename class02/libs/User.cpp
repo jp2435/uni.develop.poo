@@ -2,8 +2,11 @@
 
 #include <utility>
 
-void User::SetName(std::string Name){
-    name_ = std::move(Name);
+User::User(std::string name, std::string course, int Nmec){
+    SetName(name);
+    SetCourse(course);
+    SetNmec(Nmec);
+    SetID();
 }
 int User::UUID() {
     static int id = 0;
@@ -12,4 +15,13 @@ int User::UUID() {
 }
 void User::SetID() {
     idUsr_ = UUID();
+}
+void User::SetName(std::string Name){
+    name_ = std::move(Name);
+}
+void User::SetCourse(std::string course){
+    course_ = std::move(course);
+}
+void User::SetNmec(int Nmec){
+    Nmec_ = Nmec;
 }

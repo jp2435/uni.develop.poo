@@ -26,7 +26,7 @@ void Menu(){
          << "9 - Save current library's into a csv file\n"
          << "10- Exit\n"
          << setw(17) << setfill('-') << "\n"
-         << "Option: ";
+         << "Option:";
 }
 
 int main(){
