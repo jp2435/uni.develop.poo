@@ -20,6 +20,11 @@ public:
     void SetName(std::string Name);
     void SetCourse(std::string Course);
     void SetNmec(int Nmec);
+
+    //Getter Member functions
+    std::string GetName() const;
+    std::string GetCourse() const;
+    int GetNmec() const;
 };
 
 #endif

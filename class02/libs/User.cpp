@@ -25,3 +25,13 @@ void User::SetCourse(std::string course){
 void User::SetNmec(int Nmec){
     Nmec_ = Nmec;
 }
+
+std::string User::GetName() const{
+    return name_;
+}
+std::string User::GetCourse() const{
+    return course_;
+}
+int User::GetNmec() const{
+    return Nmec_;
+}
