@@ -26,6 +26,8 @@ public:
     int GetId() const;
     std::string GetTitle() const;
     std::string GetType() const;
+    bool IsLoaned() const;
+    int GetIDLoaned() const;
 };
 
 

@@ -38,4 +38,9 @@ std::string Book::GetTitle() const{
 std::string Book::GetType() const{
     return type_;
 }
-//Função para demonstar se está "alugado"
+bool Book::IsLoaned() const{
+    return Loan_;
+}
+int Book::GetIDLoaned() const{
+    return idLoaned_;
+}
