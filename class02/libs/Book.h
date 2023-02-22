@@ -15,6 +15,13 @@ private:
 public:
     // Construtor
     Book() = default;
+    //Setter Member Functions
+    void SetTitle(std::string title);
+    void SetType(std::string type);
+    void SetLoan(bool State);
+    void SetLoanedId(int ID);
+
+    //Getter Member Functions
 };
 
 

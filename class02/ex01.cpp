@@ -26,7 +26,7 @@ void ShowUser(User *CurrentUser){
          << "Nmec: " << (*CurrentUser).GetNmec() << endl
          << setw(17) << setfill('-') << "\n";
 }
-User CreateUser(){
+void CreateUser(){
     string name,course;
     int Nmec=0;
 
@@ -49,8 +49,6 @@ User CreateUser(){
     UserList.push_back(CurrentUser);
 
     ShowUser(&CurrentUser);
-    return CurrentUser;
-
 }
 void DeleteUser(){
     int NmecSearch;
@@ -115,8 +113,10 @@ int main(){
                 }
                 break;
             case 4:
+                //Register Book
                 break;
             case 5:
+                //List of Book's
                 break;
             case 6:
                 break;
