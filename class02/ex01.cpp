@@ -16,6 +16,9 @@ using namespace std;
 vector<User> UserList;
 vector<int> UserNmecList;
 
+vector<Book> BookList;
+vector<int> BookIdList;
+
 bool IsSlashNewLine(char c){
     return (c== '\n');
 }
@@ -74,6 +77,28 @@ void DeleteUser(){
     }
 }
 
+void ShowBook(Book* CurrentBook){
+    cout << setw(17) << setfill('-') << "\n"
+         << "Title:";
+}
+void CreateBook(){
+    string title,type;
+    cout << "Title(Finish with $):";
+    getline(cin,title,'$');
+    title.erase(remove_if(title.begin(),title.end(), IsSlashNewLine), title.end());
+
+    cout << "Type(Finish with $):";
+    getline(cin,type,'$');
+    type.erase(remove_if(type.begin(),type.end(), IsSlashNewLine), type.end());
+
+    Book CurrentBook(title,type);
+
+    BookIdList.push_back(CurrentBook.GetId());
+    BookList.push_back(CurrentBook);
+
+    //Show Book Function
+}
+
 void Menu(){
     cout << "Menu" << endl
          << setw(17) << setfill('-') << "\n"
@@ -114,6 +139,7 @@ int main(){
                 break;
             case 4:
                 //Register Book
+                CreateBook();
                 break;
             case 5:
                 //List of Book's

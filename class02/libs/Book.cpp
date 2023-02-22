@@ -1,5 +1,11 @@
 #include "Book.h"
 
+Book::Book(std::string Title, std::string Type){
+    SetID();
+    SetTitle(Title);
+    SetType(Type);
+    SetLoanedId(0);
+}
 int Book::UUID(){
     static int id = 99;
     id+=1;
@@ -23,3 +29,13 @@ void Book::SetLoanedId(int ID){
     if(ID == 0) State = false;
     this->SetLoan(State);
 }
+int Book::GetId() const{
+    return id_;
+}
+std::string Book::GetTitle() const{
+    return title_;
+}
+std::string Book::GetType() const{
+    return type_;
+}
+//Função para demonstar se está "alugado"

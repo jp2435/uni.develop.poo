@@ -14,7 +14,8 @@ private:
     static int UUID();
 public:
     // Construtor
-    Book() = default;
+    //Book() = default;
+    explicit Book(std::string Title="",std::string Type="");
     //Setter Member Functions
     void SetTitle(std::string title);
     void SetType(std::string type);
@@ -22,6 +23,9 @@ public:
     void SetLoanedId(int ID);
 
     //Getter Member Functions
+    int GetId() const;
+    std::string GetTitle() const;
+    std::string GetType() const;
 };
 
 
