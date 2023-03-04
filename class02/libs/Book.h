@@ -14,7 +14,6 @@ private:
     static int UUID();
 public:
     // Construtor
-    //Book() = default;
     explicit Book(std::string Title="",std::string Type="");
     //Setter Member Functions
     void SetTitle(std::string title);
@@ -29,6 +28,4 @@ public:
     bool IsLoaned() const;
     int GetIDLoaned() const;
 };
-
-
 #endif

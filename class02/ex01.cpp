@@ -19,6 +19,19 @@ vector<int> UserNmecList;
 vector<Book> BookList;
 vector<int> BookIdList;
 
+int FindUser(int Nmec){
+    int IndexFound = -1;
+
+    for(int i = 0;i<UserNmecList.size();i++){
+        if(UserNmecList.at(i) == Nmec){
+            IndexFound = i;
+            break;
+        }
+    }
+    // Se IndexFound == -1 é por que não foi encontrado nenhum elemento
+    return IndexFound;
+}
+
 bool IsSlashNewLine(char c){
     return (c== '\n');
 }
@@ -78,8 +91,15 @@ void DeleteUser(){
 }
 
 void ShowBook(Book* CurrentBook){
+    bool Status = (*CurrentBook).IsLoaned();
     cout << setw(17) << setfill('-') << "\n"
-         << "Title:";
+         << "Title: " << (*CurrentBook).GetTitle() << endl
+         << "Type: " << (*CurrentBook).GetType() << endl
+         << "Loaned:" << Status << endl;
+    if(Status){
+        cout << "ID Loaned:" << (*CurrentBook).GetIDLoaned() << endl;
+    }
+    cout << setw(17) << setfill('-') << "\n";
 }
 void CreateBook(){
     string title,type;
@@ -96,7 +116,15 @@ void CreateBook(){
     BookIdList.push_back(CurrentBook.GetId());
     BookList.push_back(CurrentBook);
 
-    //Show Book Function
+    ShowBook(&CurrentBook);
+}
+
+void MakeLoan(){
+    User uCurrent;
+    Book bCurrent;
+
+
+
 }
 
 void Menu(){
@@ -143,14 +171,21 @@ int main(){
                 break;
             case 5:
                 //List of Book's
+                for(const Book& current : BookList){
+                    cout << current.GetType() << endl;
+                }
                 break;
             case 6:
+                // Loan
                 break;
             case 7:
+                // Return
                 break;
             case 8:
+                // Load File
                 break;
             case 9:
+                // Save File
                 break;
             case 10:
                 return 0;
