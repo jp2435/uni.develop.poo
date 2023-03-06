@@ -7,25 +7,13 @@ private:
 public:
     explicit Time(unsigned int h=0,unsigned int m=0,unsigned int s = 0) : Hours_(h),Minutes_(m),Seconds_(s){}
     // Setter Member Functions
-    void SetHours(unsigned int h){
-        Hours_ = h;
-    }
-    void SetMinutes(unsigned int m){
-        Minutes_ = m;
-    }
-    void SetSeconds(unsigned int s){
-        Seconds_ = s;
-    }
+    void SetHours(unsigned int h);
+    void SetMinutes(unsigned int m);
+    void SetSeconds(unsigned int s);
     // Getter Member Functions
-    unsigned int GetHours() const {
-        return Hours_;
-    }
-    unsigned int GetMinutes() const {
-        return Minutes_;
-    }
-    unsigned int GetSeconds() const {
-        return Seconds_;
-    }
+    unsigned int GetHours() const;
+    unsigned int GetMinutes() const;
+    unsigned int GetSeconds() const;
 };
 
 #endif
