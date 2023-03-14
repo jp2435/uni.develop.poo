@@ -5,7 +5,7 @@
 #include "./Person.h"
 
 class Student: public Person {
-private:
+protected:
     unsigned int Nmec_;
     Date enrollment_date_;
     static unsigned int UUID();
