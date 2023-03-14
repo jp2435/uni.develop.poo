@@ -4,7 +4,7 @@
 #include "./Date.h"
 
 class Person {
-private:
+protected:
     std::string name_;
     unsigned int cc_;
     Date birth_date_;
