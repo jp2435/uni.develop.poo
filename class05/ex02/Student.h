@@ -9,7 +9,7 @@ private:
     unsigned int Nmec_;
     Date enrollment_date_;
     static unsigned int UUID();
-    static const Date& CurrentTime();
+    static Date CurrentTime();
 public:
     Student(const std::string &name, unsigned int cc,const Date &birth,const Date &enrollment=CurrentTime()) :
         Person(name, cc, birth), enrollment_date_(enrollment) {

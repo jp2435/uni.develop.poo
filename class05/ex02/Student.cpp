@@ -16,9 +16,12 @@ const Date &Student::getEnrollmentDate() const {
     return enrollment_date_;
 }
 
-const Date &Student::CurrentTime(){
+Date Student::CurrentTime(){
     time_t now = time(nullptr);
     tm *ltm = localtime(&now);
+    int day = ltm->tm_mday;
+    int month = 1 + ltm->tm_mon;
+    int year = 1900 + ltm->tm_year;
 
-    return Date(ltm->tm_mday,ltm->tm_mon,ltm->tm_year);
+    return Date(day,month,year);
 }
