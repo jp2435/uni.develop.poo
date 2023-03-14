@@ -9,7 +9,7 @@ protected:
     unsigned int cc_;
     Date birth_date_;
 public:
-    explicit Person(std::string& name, unsigned int cc,Date& birth):
+    explicit Person(const std::string& name, unsigned int cc,const Date& birth):
             name_(name),
             cc_(cc),
             birth_date_(birth){}

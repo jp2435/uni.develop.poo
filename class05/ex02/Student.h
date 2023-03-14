@@ -1,23 +1,24 @@
-#ifndef CLASS05_STUDENT_H
-#define CLASS05_STUDENT_H
+#ifndef STUDENT_H_EX02
+#define STUDENT_H_EX02
 
 #include "./Person.h"
 
 class Student: public Person {
 private:
     unsigned int Nmec_;
+    Date enrollment_date_;
     static unsigned int UUID();
 public:
-    Student(std::string &name, unsigned int cc, Date &birth) :
-        Person(name, cc, birth) {
+    Student(const std::string &name, unsigned int cc,const Date &birth,const Date &enrollment=Date(1,1,2014)) :
+        Person(name, cc, birth), enrollment_date_(enrollment) {
             Nmec_ = UUID();
     }
     // Setter Member Functions
 
     // Getter Member Functions
     unsigned int getNmec() const;
-
+    const Date &getEnrollmentDate() const;
 };
 
 
-#endif //CLASS05_STUDENT_H
+#endif

@@ -12,3 +12,6 @@ unsigned int Student::UUID() {
 unsigned int Student::getNmec() const{
     return Nmec_;
 }
+const Date &Student::getEnrollmentDate() const {
+    return enrollment_date_;
+}
