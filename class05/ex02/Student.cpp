@@ -15,3 +15,10 @@ unsigned int Student::getNmec() const{
 const Date &Student::getEnrollmentDate() const {
     return enrollment_date_;
 }
+
+const Date &Student::CurrentTime(){
+    time_t now = time(nullptr);
+    tm *ltm = localtime(&now);
+
+    return Date(ltm->tm_mday,ltm->tm_mon,ltm->tm_year);
+}
