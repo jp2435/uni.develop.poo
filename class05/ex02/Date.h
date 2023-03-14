@@ -15,7 +15,9 @@ public:
 
     virtual ~Date();
     // Setter Member Functions
-
+    void setDay(unsigned int d);
+    void setMonth(unsigned int m);
+    void setYear(unsigned int y);it st
     // Getter Member Functions
     unsigned int getDay() const;
     unsigned int getMonth() const;

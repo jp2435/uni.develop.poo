@@ -3,6 +3,16 @@
 Date::~Date(){
 
 }
+// Setter Member Functions
+void Date::setDay(unsigned int d){
+    day_ = d;
+}
+void Date::setMonth(unsigned int m){
+    month_ = m;
+}
+void Date::setYear(unsigned int y){
+    year_ = y;
+}
 
 // Getter Member Functions
 unsigned int Date::getDay() const{
