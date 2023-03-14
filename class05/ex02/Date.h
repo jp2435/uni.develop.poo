@@ -17,7 +17,7 @@ public:
     // Setter Member Functions
     void setDay(unsigned int d);
     void setMonth(unsigned int m);
-    void setYear(unsigned int y);it st
+    void setYear(unsigned int y);
     // Getter Member Functions
     unsigned int getDay() const;
     unsigned int getMonth() const;
